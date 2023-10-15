@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+    <localRepository>/media/work/tmpl/work/public/ina/.m2/repository</localRepository>
+    <interactiveMode>false</interactiveMode>
+    <proxies>
+        <proxy>
+            <active>false</active>
+            <host>lo</host>
+            <protocol>https</protocol>
+            <port>8443</port>
+            <nonProxyHosts></nonProxyHosts>
+        </proxy>
+    </proxies>
+ 
+    <!--
+      https://tmpl.sce.t-mobile.pl/nexus/content/repositories/central/org/mobicents/resources/restcomm-slee-ra-cap-library/7.0.53-tmpl-1.0.8-SNAPSHOT/restcomm-slee-ra-cap-library-7.0.53-tmpl-1.0.8-SNAPSHOT.pom:
+    -->
+    <mirrors>
+        <mirror>
+            <id>maven-default-http-blocker</id>
+            <mirrorOf>external:dummy:*</mirrorOf>
+            <name>Pseudo repository to mirror external repositories initially using HTTP.</name>
+            <url>http://0.0.0.0/</url>
+            <blocked>true</blocked>
+        </mirror>
+    </mirrors>
+
+
+    <servers>
+        <activeProfiles>
+            <activeProfile>atlassian</activeProfile>
+            <activeProfile>jboss</activeProfile>
+            <activeProfile>telestax.jfrog</activeProfile>
+            <activeProfile>jboss-ga</activeProfile>
+            <activeProfile>mulesoft</activeProfile>
+            <activeProfile>atricore</activeProfile>
+            <activeProfile>cipango</activeProfile>
+            <activeProfile>opencloud</activeProfile>
+            <activeProfile>repo1</activeProfile>
+
+        </activeProfiles>
+        <profiles>
+
+
+            <profile>
+                <id>repo1</id>
+
+                <repositories>
+                    <repository>
+                        <id>repo1</id>
+                        <url>	https://repo1.maven.org/maven2/</url>
+                        <!--
+                        <url>https://igetdb.sourceforge.io/maven2-repository/</url>
+                        -->
+                        <releases>
+                            <enabled>true</enabled>
+                        </releases>
+                        <snapshots>
+                            <enabled>false</enabled>
+                        </snapshots>
+                    </repository>
+                </repositories>
+            </profile>
+            <profile>
+                <id>cipango</id>
+
+                <repositories>
+                    <repository>
+                        <id>cipango</id>
+                        <url>	http://repository.cipango.org/</url>
+                        <!--
+                        <url>https://igetdb.sourceforge.io/maven2-repository/</url>
+                        -->
+                        <releases>
+                            <enabled>true</enabled>
+                        </releases>
+                        <snapshots>
+                            <enabled>false</enabled>
+                        </snapshots>
+                    </repository>
+                </repositories>
+            </profile>
+            <profile>
+                <id>opencloud</id>
+                <repositories>
+                    <repository>
+                        <id>opencloud</id>
+                        <url>	http://developer.opencloud.com/maven2/public</url>
+                        <releases>
+                            <enabled>true</enabled>
+                        </releases>
+                        <snapshots>
+                            <enabled>false</enabled>
+                        </snapshots>
+                    </repository>
+                </repositories>
+                <pluginRepositories>
+                    <pluginRepository>
+                        <id>jainslee</id>
+                        <name>Jainslee repos</name>
+                        <url>http://developer.opencloud.com/maven2/public</url>
+                        <releases>
+                            <enabled>false</enabled>
+                        </releases>
+                    </pluginRepository>
+                </pluginRepositories> 
+            </profile>
+            <profile>
+                <id>atricore</id>
+                <repositories>
+                    <repository>
+                        <id>atricore</id>
+                        <url>	http://www.datanucleus.org/downloads/maven2/</url>
+                        <!--
+                        <url>https://igetdb.sourceforge.io/maven2-repository/</url>
+                        <url>http://repository.atricore.org/m2-release-repository/</url>
+                        -->
+                        <releases>
+                            <enabled>true</enabled>
+                        </releases>
+                        <snapshots>
+                            <enabled>false</enabled>
+                        </snapshots>
+                    </repository>
+                </repositories>
+            </profile>
+     
+     
+            <profile>
+                <id>mulesoft</id>
+                <repositories>
+                
+                    <repository>
+                        <id>mulesoft</id>
+                        <!--
+                        <url>http://repository.atricore.org/m2-release-repository/</url>
+                        -->
+                        <url>https://repository.mulesoft.org/nexus/content/repositories/public/</url>
+                        <releases>
+                            <enabled>true</enabled>
+                        </releases>
+                        <snapshots>
+                            <enabled>false</enabled>
+                        </snapshots>
+                    </repository>
+                </repositories>
+ 
+            </profile>
+     
+            <profile>
+                <id>jboss-ga</id>
+                <repositories>
+                    <repository>
+                        <id>jboss-ga</id>
+                        <url>https://maven.repository.redhat.com/ga/</url>
+                        <releases>
+                            <enabled>true</enabled>
+                        </releases>
+                        <snapshots>
+                            <enabled>false</enabled>
+                        </snapshots>
+                    </repository>
+                </repositories>
+ 
+            </profile>
+    
+            <profile>
+                <id>atlassian</id>
+                <repositories>
+                    <repository>
+                        <id>atlassian</id>
+                        <url>https://maven.atlassian.com/3rdparty/</url>
+                        <releases>
+                            <enabled>true</enabled>
+                        </releases>
+                        <snapshots>
+                            <enabled>false</enabled>
+                        </snapshots>
+                    </repository>
+                </repositories>
+ 
+            </profile>
+    
+            <profile>
+                <id>jboss</id>
+                <repositories>
+                    <repository>
+                        <id>jboss.releases</id>
+                        <url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
+                        <releases>
+                            <enabled>true</enabled>
+                        </releases>
+                        <snapshots>
+                            <enabled>false</enabled>
+                        </snapshots>
+                    </repository>
+                </repositories>
+
+                <pluginRepositories>
+                    <pluginRepository>
+                        <id>spring.plugin-releases</id>
+                        <url>https://repository.jboss.org/nexus/content/groups/public-jboss</url>
+                        <releases>
+                            <enabled>true</enabled>
+                        </releases>
+                        <snapshots>
+                            <enabled>false</enabled>
+                        </snapshots>
+                    </pluginRepository>
+                </pluginRepositories>
+ 
+            </profile>
+            <profile>
+                <id>telestax.jfrog</id>
+                <repositories>
+                    <repository>
+                        <id>telestax.jfrog.releases</id>
+                        <url>https://telestax.jfrog.io/artifactory/releases/</url>
+                        <releases>
+                            <enabled>true</enabled>
+                        </releases>
+                        <snapshots>
+                            <enabled>false</enabled>
+                        </snapshots>
+                    </repository>
+                    <repository>
+                        <id>telestax.jfrog.snapshots</id>
+                        <url>https://telestax.jfrog.io/artifactory/snapshots/</url>
+                        <releases>
+                            <enabled>false</enabled>
+                        </releases>
+                        <snapshots>
+                            <enabled>true</enabled>
+                        </snapshots>
+                    </repository>
+                </repositories>
+                <pluginRepositories>
+                    <pluginRepository>
+                        <id>telestax.jfrog.plugin-releases-local</id>
+                        <url>https://telestax.jfrog.io/artifactory/plugin-releases-local/</url>
+                        <releases>
+                            <enabled>true</enabled>
+                        </releases>
+                        <snapshots>
+                            <enabled>false</enabled>
+                        </snapshots>
+                    </pluginRepository>
+                    <pluginRepository>
+                        <id>telestax.jfrog.plugin-snapshots-local</id>
+                        <url>https://telestax.jfrog.io/artifactory/plugin-snapshots-local/</url>
+                        <releases>
+                            <enabled>false</enabled>
+                        </releases>
+                        <snapshots>
+                            <enabled>true</enabled>
+                        </snapshots>
+                    </pluginRepository>
+                </pluginRepositories>
+            </profile>
+        </profiles>
+</settings>
